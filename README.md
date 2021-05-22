@@ -1,2 +1,3 @@
-# Canvass
-Canvass clone using Springboot, Kafka 
+# Canvass Clone for Practice
+Backend is developed in JAVA Springboot with Kafka
+
