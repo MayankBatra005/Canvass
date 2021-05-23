@@ -30,3 +30,20 @@ In the springboot project add Dependencies
             <scope>test</scope>
         </dependency>
 ```
+[Kafka Tutorial](https://www.youtube.com/watch?v=L_iu8HOus8k)
+## Springboot-Kafka Configurations
+	Kafka configurations can be done in two ways:
+	1. Using application.properties 
+	2. Via Code using @Configuration Annotation 
+
+## Springboot Producer 
+	1. Create a service annotation 
+	2. Create a final string topic 
+	3. Now we need a kafka Template instance 
+	4. Now use this kafka template to send the message 
+
+## Springboot Consumer
+	1. Create a service annotation 
+	2. Implement the @KafkaListener
+	3. Capture the message inside this listener (It can be a string, any object,
+	I have implemented an assignment)
