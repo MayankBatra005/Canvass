@@ -31,6 +31,6 @@ public class StudentService {
     // Message here is an assignment
     @KafkaListener(topics="Assignments",groupId = "Students")
     public void consumeTopic(Assignments assignments){
-        System.out.println(assignments.getName());
+        System.out.println("Notification received by consumer "+assignments.getName());
     }
 }
