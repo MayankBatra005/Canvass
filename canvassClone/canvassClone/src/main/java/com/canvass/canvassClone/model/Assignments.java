@@ -15,4 +15,15 @@ public class Assignments {
     public String question2;
     public String answer2;
 
+    @Override
+    public String toString() {
+        return "Assignments{" +
+                "id=" + id +
+                ", Name='" + Name + '\'' +
+                ", question1='" + question1 + '\'' +
+                ", answer1='" + answer1 + '\'' +
+                ", question2='" + question2 + '\'' +
+                ", answer2='" + answer2 + '\'' +
+                '}';
+    }
 }

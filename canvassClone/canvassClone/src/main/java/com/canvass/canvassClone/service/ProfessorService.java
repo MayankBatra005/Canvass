@@ -29,6 +29,7 @@ public class ProfessorService {
     public String postAssignmentEvent(){
         System.out.println("Sending the message");
         kafkaTemplate.send(topic,assignments.get(0));
+
         return "Event Posted";
     }
 }
