@@ -1,5 +1,6 @@
 package com.canvass.canvassClone.controller;
 
+import com.canvass.canvassClone.model.Assignments;
 import com.canvass.canvassClone.model.Students;
 import com.canvass.canvassClone.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +39,9 @@ public class StudentController {
         return false;
     }
 
-    @GetMapping("/CompleteAssignment")
-    public String completeAssignment(){
-        return studentService.completeAssignment()?
+    @PostMapping("/CompleteAssignment")
+    public String completeAssignment(@RequestBody List<Assignments> assignments){
+        return studentService.completeAssignment(assignments)?
                 studentService.postAssignmentCompletionNotification():"Don't Post";
     }
 
