@@ -34,7 +34,8 @@ In the springboot project add Dependencies
 ## Springboot-Kafka Configurations
 	Kafka configurations can be done in two ways:
 	1. Using application.properties 
-	2. Via Code using @Configuration Annotation 
+	2. Via Code using @Configuration Annotation (Since we have our own type of model
+	  so we are using @configuration method to specify the attributes
 
 ## Springboot Producer 
 	1. Create a service annotation 
@@ -47,3 +48,28 @@ In the springboot project add Dependencies
 	2. Implement the @KafkaListener
 	3. Capture the message inside this listener (It can be a string, any object,
 	I have implemented an assignment)
+
+## Application Flow
+	There is a professor acting as a producer of Assignments, 
+	There is a student acting as a consumer of Assignments
+	Assignments are created by Professor and as soon as assignment is create a 
+	notification (Event :Topic) is generated for student.
+	
+## Future scope 
+	1. Implement the notification from consumer whenever the assignment is completed.
+	2. Divide this monolith application into micro-services
+	
+## Steps to run the application 
+	1. Start the kafka server for zookeper 
+	2. Start the kafka server 
+	3. Run the springboot application 
+	4. Test the active assignments in postman
+	5. Create assignments in postman (Triggering notification for Student)
+	6. Complete assignment in postman 
+	
+## Challenges faced 
+	1. Deserilization of custom topic (Assignments ) required both toString() and a default constructor
+	
+
+
+
